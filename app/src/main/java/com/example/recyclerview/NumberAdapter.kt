@@ -1,6 +1,7 @@
 package com.example.recyclerview
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -46,6 +47,9 @@ class NumberAdapter(val context: Context): RecyclerView.Adapter<NumberAdapter.Vi
         holder.textView.text = "position $position $student"
         holder.textView.setOnClickListener {
             Toast.makeText(context, "Position: $position $student", Toast.LENGTH_SHORT).show()
+            val intent = Intent(context, DetailActivity::class.java)
+            intent.putExtra(STUDENT_ID_EXTRA, student)
+            context.startActivity(intent)
         }
     }
 
