@@ -41,8 +41,12 @@ class MainActivity : AppCompatActivity() {
         dialog.setContentView(R.layout.dialog_input)
         val editText = dialog.findViewById(R.id.input_id) as EditText
         val saveBtn = dialog.findViewById(R.id.saveButton) as Button
+        val exitBtn = dialog.findViewById(R.id.exitbutton) as Button
         saveBtn.setOnClickListener {
             adapter.addStudent(editText.text.toString())
+            dialog.dismiss()
+        }
+        exitBtn.setOnClickListener {
             dialog.dismiss()
         }
         dialog.show()
