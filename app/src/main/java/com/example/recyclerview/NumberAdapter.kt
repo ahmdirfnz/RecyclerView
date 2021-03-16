@@ -55,6 +55,7 @@ class NumberAdapter(val context: Context): RecyclerView.Adapter<NumberAdapter.Vi
 
     override fun getItemCount(): Int {
         return students.size
+
     }
 
 }
