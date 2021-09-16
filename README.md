@@ -2,5 +2,5 @@
 
 ## Run the program
 
-$ g++ projectCoding.cpp -o project
-$ project
+`$ g++ projectCoding.cpp -o project`
+`$ project`
